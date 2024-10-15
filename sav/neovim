@@ -1,0 +1,16 @@
+libluv      
+libtermkey  
+libuv       
+libvterm    
+luajit      
+msgpack-c   
+unibilium
+
+python-pynvim:
+  python-greenlet
+clang clang-tools-extra:
+  compiler-rt
+cmake:
+  jsoncpp  
+  libuv    
+  rhash    

@@ -1,0 +1,13 @@
+
+workspace main
+  tab main
+    buff pack : pack.yml
+    buff pacm : pack.pac
+    buff paur : pack.aur
+   *buff save : save
+   *buff alih : alih
+   *buff make : Makefile
+ *tab bin
+    buff config  : bin/config.sh
+    buff install : bin/install.sh
+    buff yay     : bin/yay.sh

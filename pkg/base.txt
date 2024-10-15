@@ -1,0 +1,6 @@
+base
+base-devel
+mkinitcpio
+linux
+linux-firmware
+grub

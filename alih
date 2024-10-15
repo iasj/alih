@@ -1,0 +1,51 @@
+#!/usr/bin/env python
+# encoding: utf-8
+
+from yaml import load
+from yaml import FullLoader
+from subprocess import call
+from pprint import pprint
+
+pkgs = {
+
+'aur'    : '',
+'npm'    : '',
+'pip'    : '',
+'gem'    : '',
+'pacman' : '',
+
+}
+
+base = ''
+
+output = 'pkg'
+
+def filter_packages():
+
+  yaml_file = 'pack.yml'
+  yaml = load(open(yaml_file,'r'),Loader=FullLoader)
+
+  global base                                         
+  global pkgs
+  base = yaml['base']
+
+  categories = yaml['categories']
+
+  if categories:
+    for packers in categories.values():
+      if packers:
+        for packer in packers:
+          if packers[packer]:
+            pkgs[packer] += packers[packer] + ' '
+
+def export_packages():
+  if pkgs:
+    for packer in pkgs:
+      fp = open(output+'/'+packer+'.txt','w')
+      fp.write(pkgs[packer].strip().replace(' ',"\n"))
+      fp.close()
+
+  open(output+'/base.txt','w').write(base.replace(' ',"\n"))
+
+filter_packages()
+export_packages()

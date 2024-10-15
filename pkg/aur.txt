@@ -1,0 +1,3 @@
+ttf-ms-fonts
+tmux-bash-completion
+bashmount

@@ -1,0 +1,368 @@
+  ---
+  base: "base
+  base-devel
+  mkinitcpio
+  linux
+  linux-firmware
+  grub"
+  base: ""
+  categories:   #{
+
+    i3:                                   #{
+      pacman:
+        i3-wm
+        rofi
+        picom
+        xorg-setxkbmap
+        xorg-xmodmap
+        xorg-xev
+        #xorg
+        #xorg-xrandr
+    #}
+    fonts:                                #{
+      pacman:
+        ttf-droid
+        ttf-dejavu
+      aur:
+        ttf-ms-fonts
+    #}
+    python:                               #{
+      pacman:
+        python
+        python-pip
+        python-yaml
+        #python-libtmux
+      #aur:
+      #  python-pypdf2
+    #}
+    network:                              #{
+      pacman:
+        ntp
+        networkmanager
+        network-manager-applet
+        openssh
+        netctl
+        #nfs-utils
+        #networkmanager-openconnect
+        #rp-pppoe
+        #gnome-keyring
+        #libsecret
+        #xfce4-notifyd
+        #gnome-icon-theme
+
+    #}
+    internet:                             #{
+      pacman:
+        youtube-dl
+        telegram-desktop
+        #firefox
+        #qbittorrent
+        #flashplugin
+      #aur:
+        #brave-bin
+        ##luakit-git
+        ##google-chrome
+    #}
+    audio:                                #{
+      pacman:
+        ffmpeg
+        moc
+        alsa-firmware
+        alsa-tools
+        alsa-plugins
+        alsa-utils
+        alsa-lib
+    #}
+    image:                                #{
+      pacman:
+        feh
+        gimp
+        inkscape
+        #slop
+        #screenkey
+        #eog
+      #aur:
+        #yed
+    #}
+    video:                                #{
+      pacman:
+        mpv
+        #gnome-subtitles
+        #openshot
+        #simplescreenrecorder
+        ##kdenlive
+        ##vlc
+    #}
+    documents:                            #{
+      pacman:
+        zathura
+        zathura-pdf-mupdf
+        zathura-cb
+        zathura-djvu
+        zathura-ps
+        #gedit
+        #evince
+      #aur:
+        #wps-office
+        ##sc-im-git
+    #}
+    compression:                           #{
+      pacman:
+        zip
+        p7zip
+        unzip
+        unrar
+    ##}
+    system:                               #{
+      pacman:
+        rpmextract
+        go
+        bash-completion
+        wget
+        tree
+        sdcv
+        tmux
+        termite
+        rsync
+        htop
+        arandr
+        xfce4-power-manager
+        gnome-screenshot
+        acpi
+        #httpie
+        #curlie
+        #jdk-openjdk
+        #hdparm
+        #pavucontrol
+        #xdotool
+        #efibootmgr
+        #efivar
+        #dialog
+        #archlinux-keyring
+        #subdl
+        #samba
+        #nmap
+        #redshift
+        #gparted
+      aur:
+        tmux-bash-completion
+        #jdk
+        ##tudu-git
+      #npm:
+      #  normit
+    #}
+    git:                                  #{
+      pacman:
+        git
+        #github-cli
+    #}
+    files:                                #{
+      pacman:
+        ranger
+        #atool
+        #xarchiver
+        #file-roller
+        #nautilus
+      aur:
+        bashmount
+    #}
+    develop:                              #{
+      pacman:
+        man-pages
+        #gtk-doc
+        #glade
+        #archiso
+        #arch-wiki-docs
+        #arch-install-scripts
+        #tig
+        #aur:
+        #  python-grip
+    ##}
+    cellphones:                           #{
+      pacman:
+        fuseiso
+        usbmuxd
+        libplist
+        libmtp
+        mtpfs
+        android-file-transfer
+        gvfs-mtp
+
+    #}
+    msdos:                               #{
+      pacman:
+        mtools
+        dosfstools
+        ntfs-3g
+    #}
+    neovim:                               #{
+      pacman:
+        neovim
+        libuv
+        node-gyp
+        nodejs
+        semver
+        libluv
+        libtermkey
+        libuv
+        libvterm
+        luajit
+        msgpack-c
+        unibilium
+        python-pynvim
+        python-greenlet
+        clang
+        compiler-rt
+        cmake
+        jsoncpp
+        libuv
+        rhash
+        nodejs
+        npm
+        python-pynvim
+        ctags
+        clang
+        xsel
+        lua
+        cmake
+        python-jedi
+    #}
+    nodejs:                               #{
+      pacman:
+        nodejs
+        npm
+      #aur:
+        #nvm
+    ##}
+    #dependencies:                        #{
+      #pacman:
+        #muparser
+        #qt5-svg
+        #python-pyserial
+    #}
+    #latex:                                #{
+      #pacman:
+        #texlive-bin texlive-core texlive-most texlive-lang
+      #aur:
+        #latex-mk
+    ###}
+    #crypto:                               #{
+    #  npm:
+    #    coinmon
+    ##}
+    #hacking:                             #{
+    #  pacman:
+    #    aircrack-ng-scripts
+    #    macchanger
+    #    #wireshark-gtk
+    #  aur:
+    #    crunch
+    ##}
+    #3d_printer:                           #{
+      #pacman:
+        #openscad
+        #librecad
+        #cura
+        #blender
+      #aur:
+        #printrun
+        #slic3r-bin
+        ##mattercontrol
+    ##}
+    #electronics:                          #{
+      #pacman:
+        #kicad
+        #kicad-library
+        #kicad-library-3d
+    ##}
+    #appimage:                             #{
+      #pacman:
+        #libappimage
+        #gconf
+      #aur:
+        #appimage-git
+        #appimagelauncher
+        #simple-package-manager
+    ##}
+    #printer:                             #{
+    #  pacman:
+    #    atool
+    #    cups
+    #    cups-pdf
+    #    gtk3-print-backends
+    #    avahi
+    #    nss-mdns
+    #  aur:
+    #    #brother-dcpl2540dw-cups
+    ##}
+    #language:                            #{
+    #  pacman:
+    #    aspell-en
+    #    aspell-fr
+    #    aspell-de
+    #    aspell-es
+    #    aspell-nl
+    #    aspell-pt
+    #    #fcitx
+    #    #fcitx-mozc
+    #    #fcitx-kkc
+    #    #fcitx-im
+    #    #adobe-source-han-sans-otc-fonts
+    #    #adobe-source-han-sans-jp-fonts
+    ##}
+    #arduino:                              #{
+    #  pacman:
+    #    arduino
+    #    arduino-docs
+    #    arduino-avr-core
+    #    arduino-builder
+    #  aur:
+    #    fritzing
+    ##}
+    #avr:                                  #{
+      #pacman:
+        #avr-binutils
+        #avrdude
+        #avr-gcc
+        #avr-gdb
+        #avr-libc
+    ##}
+    #virtualbox:                          #{
+    #  pacman:
+    #    virtualbox
+    #    virtualbox-guest-iso
+    #    virtualbox-host-modules-arch
+    #    linux-headers
+    #  aur:
+    #    virtualbox-ext-oracle
+    ##}
+    #zshel:                               #{
+    #  pacman:
+    #    zsh
+    #    zshdb
+    #    zsh-lovers
+    #    zsh-autosuggestions
+    #    zsh-doc
+    #    zsh-syntax-highlighting
+    #    zsh-completions
+    #    zsh-history-substring-search
+    #    zsh-theme-powerlevel9k
+    ##}
+    #security:                            #{
+    #  pacman:
+    #    tor
+    #    networkmanager-openvpn
+    #    openvpn
+    ##}
+    #uml:                                  #{
+      #pacman:
+        #plantuml
+        #graphviz
+    #}
+
+  #}
+  dependencies: #{
+    telegram:
+      unspell jasper kwayland libdbusmenu-qt5 libmng minizip openal
+      qt5-declarative qt5-imageformats qt5-wayland ttf-opensans
+  #}
